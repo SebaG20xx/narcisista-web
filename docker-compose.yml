@@ -1,0 +1,9 @@
+services:
+  narcisista-web:
+    container_name: narcisista-web-${ENTORNO}
+    image: narcisista-web:${ENTORNO}
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    ports:
+      - "${PUERTO}:80"
